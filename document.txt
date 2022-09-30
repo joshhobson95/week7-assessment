@@ -1,0 +1,13 @@
+doublerInsert               doublerAppend
+/////////////               //////////////
+XL insert 1.0373814 s          XL append 2.6305 ms
+L insert 9.8081 ms              L append 574.3 μs
+M insert 201.1 μs               M append 155.2 μs
+S insert 58.1 μs                S append 113.5 μs
+t insert 46 μs                  t append 130.7 μs
+                                  
+
+Starting with the XL array we can see that the insert function takes considerably more time, taking a whole second while the append function takes on fractions for a second. As we move to large we see the same descrepincy with the insert taking milliseconds and the append much faster only taking microseconds. But as we move into Medium, Small and tiny we start to see a change. The Insert function starts to catch up in speed at the medium array length and then actually surpasses the append method in speed in small and tiny arrays. It is also important to note that the tiny array was actually slower in the same append function than the small array.
+As the arrays get larger, the insert function gets slower as it has to deal with more numbers and the append function scales much better, only getting slightly slower as it deals with more numbers. 
+
+The insert function is slower because it is looping over the entire array of numbers before placing the result at the begining of the array when it .unshift()'s them. This leads to incredibly slow times when 100,000 numbers must be looped over. In contrast, the append method is using a .push() method which simply places the number at the end of the array without having to loop over the array at all.
