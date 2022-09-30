@@ -20,7 +20,7 @@ console.log(checker)
 addToZero([1, 2, 3]);
 
 //Time complexity: O(n^2)
-//Space complexity: O(1)
+//Space complexity: O(n)
 
 
 //2 Write a function that takes in a single word, as a string. It should return True if that word contains only unique characters. Return False otherwise.
@@ -40,7 +40,7 @@ console.log(hasUniqueChars('Moonday'))
 console.log(hasUniqueChars('Bob'))
 
 //Time complexity: O(n)
-//Space complexity: O(1)
+//Space complexity: O(n)
 
 //3 A pangram is a sentence that contains all the letters of the English alphabet at least once, like “The quick brown fox jumps over the lazy dog.”
 //Write a function to check a sentence to see if it is a pangram or not.
@@ -62,7 +62,7 @@ console.log(pangrams('We promptly judged antique ivory buckles for the next priz
 
 
 //Time complexity: O(n)
-//Space complexity: O(1)
+//Space complexity: O(n)
 
 //4 Write a function, find_longest_word, that takes a list of words and returns the length of the longest one.
 
@@ -73,6 +73,6 @@ function findLongestWord(str) {
 console.log(findLongestWord("The quick brown fox jumped over the lazy dog"))
 
 //Time complexity: O(n)
-//Space complexity: O(1)
+//Space complexity: O(n)
 
 
